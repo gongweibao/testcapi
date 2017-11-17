@@ -4,15 +4,7 @@
 # 重现的步骤
 ## 编译环境
 ```
-docker pull paddlepaddle/centos6u3-capi:latest-dev
-```
-
-## 对比时间
-```
-git clone https://github.com/gongweibao/testcapi.git
-cd testcapi
-docker run --rm -it -v $PWD:/root/test paddlepaddle/centos6u3-capi:latest-dev /bin/bash
-cd /root/test
+docker run --rm -it gongweibao/testcapi /bin/bash
 ./build.sh
 ./run.sh
 ```
