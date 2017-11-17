@@ -9,11 +9,15 @@ docker pull paddlepaddle/centos6u3-capi:latest-dev
 
 ## 对比时间
 ```
-docker run --rm -it -v <your-zhangtai-repo-path>:/test paddlepaddle/centos6u3-capi:latest-dev /bin/bash
-cd /test
+git clone https://github.com/gongweibao/testcapi.git
+cd testcapi
+docker run --rm -it -v $PWD:/root/test paddlepaddle/centos6u3-capi:latest-dev /bin/bash
+cd /root/test
+./build.sh
+./run.sh
 ```
 
-修改`CMakeLists.txt`，分别连接`mkl`和`mklml`下的library,然后执行`./build/exeModel`,看其打印的时间作对比。
+注：链接`mklml`的测试程序会core，但是在公司内部任何机器上跑都没有问题。具体的原因还需要查。
 
 
 ## 各个库是怎么编译出来的：
