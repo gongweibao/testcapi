@@ -9,8 +9,6 @@ nvidia-docker  run --rm -it --security-opt seccomp=unconfined  gongweibao/testca
 ./run.sh
 ```
 
-注：链接`mklml`的测试程序会core，但是在公司内部任何机器上跑都没有问题。具体的原因还需要查。
-
 
 ## 各个库是怎么编译出来的：
 ```
