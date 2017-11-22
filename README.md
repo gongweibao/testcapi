@@ -4,7 +4,7 @@
 # 重现的步骤
 ## 编译环境
 ```
-docker run --rm -it gongweibao/testcapi /bin/bash
+nvidia-docker  run --rm -it --security-opt seccomp=unconfined  gongweibao/testcapi /bin/bash
 ./build.sh
 ./run.sh
 ```
