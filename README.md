@@ -2,7 +2,7 @@
 公司内部有一个自己的`mkl`库，由于时代久远(?)现在对其版本已经不可查。公司内部的`CAPI`一直是链接这个库的。后来，换成了`mklml`库，这个时候用户表示`CAPI`库cpu版本的性能下降了1倍到10倍不等。这个project是下降10倍的版本。
 
 # 重现的步骤
-## 编译环境
+## 重现环境
 ```
 nvidia-docker  run --rm -it --security-opt seccomp=unconfined  gongweibao/testcapi /bin/bash
 ./build.sh
